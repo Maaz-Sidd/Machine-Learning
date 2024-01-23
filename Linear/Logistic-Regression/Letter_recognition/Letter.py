@@ -45,7 +45,7 @@ def predict(X, weights, bias):
     for i in range(len(linear_model)):
             linear_model[i] += bias
     prediction = np.round(linear_model)
-    if prediction > 25:
+    if prediction.any() > 25:
         prediction = 25
     return prediction
 
